@@ -7,6 +7,10 @@ import { useEffect } from 'react';
 import 'react-native-reanimated';
 
 import { useColorScheme } from '@/components/useColorScheme';
+import { AuthProvider } from '@/contexts/AuthContext';
+import { ProductsProvider } from '@/contexts/ProductsContext';
+import { StatusBar } from 'expo-status-bar';
+import AppNavigator from '@/navigation/AppNavigator';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -50,10 +54,12 @@ function RootLayoutNav() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
-      </Stack>
+      <AuthProvider>
+        <ProductsProvider>
+          <StatusBar style="dark" />
+          <AppNavigator />
+        </ProductsProvider>
+      </AuthProvider>
     </ThemeProvider>
   );
 }
