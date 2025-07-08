@@ -4,12 +4,6 @@ Bienvenue dans mon application mobile de gestion de collection de produits ! J�
 
 ---
 
-<div align="center">
-  <img src="assets/images/icon.png" alt="Logo" width="96" style="border-radius:24px; box-shadow:0 4px 24px #0002; margin-bottom:16px;" />
-</div>
-
----
-
 ## 🎨 Design & Expérience Utilisateur
 
 - **Palette de couleurs** : J’utilise des tons sobres et modernes (`#1f2937`, `#f9fafb`, `#374151`) pour une interface élégante et professionnelle.
